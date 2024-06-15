@@ -7,7 +7,7 @@ public class RightRotateArray {
         int n = sc.nextInt();
 
         int[] elements = new int[n];
-        for(int i=0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             elements[i] = sc.nextInt();
         }
 
@@ -18,15 +18,15 @@ public class RightRotateArray {
     }
 
     private static void rotateByK(int[] nums, int k) {
-        int l = nums.length, m=k;
+        int l = nums.length, m = k;
 
-        if (k >= l) m = k%l;
+        if (k >= l) m = k % l;
 
-        reverseArray(nums, 0, l-m-1);
-        reverseArray(nums, l-m, l-1);
-        reverseArray(nums, 0, l-1);
+        reverseArray(nums, 0, l - m - 1);
+        reverseArray(nums, l - m, l - 1);
+        reverseArray(nums, 0, l - 1);
 
-        for(int i=0; i<l; i++) {
+        for (int i = 0; i < l; i++) {
             System.out.println(nums[i]);
         }
     }
